@@ -7,12 +7,13 @@ int partition(int *array, size_t size, int left, int right);
 void lomuto_sort(int *array, size_t size, int left, int right);
 
 /**
+ * partition - creates a partition for sorting
+ * @array: pointer to the array
+ * @size: size of the array
+ * @left: left most index of the given partition array
+ * @right: right most index of the given partition array
  *
- *
- *
- *
- *
- *
+ * Return: int, index of the new partition.
  */
 
 int partition(int *array, size_t size, int left, int right)
@@ -43,10 +44,11 @@ int partition(int *array, size_t size, int left, int right)
 }
 
 /**
+ * swap - swaps two ints inside an array
+ * @a: first int
+ * @b: second int
  *
- *
- *
- *
+ * Return: void, returns a null void pointer
  */
 
 void swap(int *a, int *b)
@@ -55,6 +57,16 @@ void swap(int *a, int *b)
 	*a = *b;
 	*b = t;
 }
+
+/**
+ * lomuto_sort - lomuto partition scheme sort
+ * @array: pointer to array to sort
+ * @size: size of the array
+ * @left: left most index of the array to sort
+ * @right: right most index of the array to sort
+ *
+ * Return: void, returns a null void pointer
+ */
 
 void lomuto_sort(int *array, size_t size, int left, int right)
 {
@@ -69,12 +81,11 @@ void lomuto_sort(int *array, size_t size, int left, int right)
 }
 
 /**
+ * quick_sort - sorts an array using quick sort, lomuto partition scheme
+ * @array: array to sort
+ * @size: size of the array
  *
- *
- *
- *
- *
- *
+ * Return: void, returns a null void pointer
  */
 
 void quick_sort(int *array, size_t size)
